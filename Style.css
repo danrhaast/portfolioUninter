@@ -36,6 +36,7 @@ header {
         justify-content: space-between;
         width: 100%;
         top: 0;
+        left:0;
         padding: 10px;
     }
 
@@ -58,9 +59,10 @@ header {
             margin-right: 20px;
 
             a {
+                font-size: 18px;
                 color: var(--branco);
                 text-decoration: none;
-
+                transition: ease 0.3s;
             }
 
             a:hover {
@@ -217,18 +219,43 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 30vw;
+    width: 40vw;
     height: 40vh;
     background: var(--marrom);
+   }
+
+   label { 
+    margin-left: 10px;
    }
 
    .input {
     margin-bottom: 10px;
    }
 
-   input {
-    padding: 8px;
+   input, textarea {
+    padding: 10px;
+    width: 295px;
     height: 30px;
-    border: none;   
+    border: none;
+    border-radius: 10px;   
+   }
+
+   #mensagem {
+    height: 70px;
+   }
+
+   button {
+    padding: 15px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    color: var(--preto);
+    transition: ease 0.3s;
+   }
+
+   button:hover {
+    color: var(--branco);
+    background-color: var(--vinho);
+    cursor: pointer;
    }
 }
