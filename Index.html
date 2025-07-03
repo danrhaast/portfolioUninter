@@ -41,7 +41,9 @@
 
         <section class="aboutMe">
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                <h3>Sobre Mim</h3>
+                <div class="about">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Consectetur mollitia itaque ducimus numquam aliquid eligendi
                     odio maiores nulla accusamus quas, vitae temporibus asperiores
                     voluptatum voluptatibus alias amet cum. Quo, dolore!</p>
@@ -53,6 +55,7 @@
                     Consectetur mollitia itaque ducimus numquam aliquid eligendi
                     odio maiores nulla accusamus quas, vitae temporibus asperiores
                     voluptatum voluptatibus alias amet cum. Quo, dolore!</p>
+                </div>    
             </div>
         </section>
 
@@ -236,7 +239,7 @@
     <footer>
         <section class="form">
             <h2>Entre em contato</h2>
-                <form action="">
+                <form onsubmit="enviarWhats(event)">
                     <div>
                         <div class="input">
                             <label for="nome">Nome:</label><br>
@@ -253,8 +256,27 @@
                             <textarea id="mensagem" placeholder="Digite sua mensagem" rows="6"></textarea>
                         </div>
                     </div>
-                    <button>Enviar</button>
+                    <button type="submit">Enviar</button>
                 </form>
+
+                <script>
+
+                    function enviarWhats (event) {
+                        event.preventDefault()
+
+                        const nome = document.getElementById('nome').value
+                        const email = document.getElementById('email').value
+                        const msg = document.getElementById('mensagem').value
+                        const telefone = '555492029984'
+
+                        const texto = `Olá me chamo ${nome}, ${msg}, este é o meu email ${email}`
+                        const msgformt = encodeURIComponent(texto)
+
+                        const url = `https://wa.me/${telefone}?text=${msgformt}`
+
+                        window.open(url, '_blank')
+                    }
+                </script>
 
         </section>
     </footer>
