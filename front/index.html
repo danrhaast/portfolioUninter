@@ -7,19 +7,31 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <!-- Conexão com o CSS: -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- Conexão com o script de mensagem para o WhatsApp: -->
     <script src="script.js"></script>
     <title>Portfólio - Daniel Ferraz dos Santos</title>
 </head>
 
+
+<!-- Este projeto comntém uma forma simples de estruturação
+    para a sua construção foi pensado em fazer a página utili-
+    zando um cabeçalho, conteúdo principal e depois um rodapé.
+    dentro do conteúdo principal, foi separado cada uma das
+    partes em seções, cada uma com uma classe para a estiliza-
+    ção depois em CSS. -->
 <body>
-    <header id="inicio">
+    <div id="inicio"></div>
+    <header>
         <nav>
             <ul>
                 <h1>Portfólio</h1>
                 <div>
                     <li><a class="link" href="#inicio">Inicio</a></li>
-                    <li><a class="link" href="#sobreMim">Sobre Mim</a></li>
+                    <li><a class="link" href="#formacao">Formação</a></li>
                     <li><a class="link" href="#habilidades">Habilidades</a></li>
                     <li><a class="link" href="#tecnologias">Tecnologias</a></li>
                     <li><a class="link" href="#redesSociais">Redes Sociais</a></li>
@@ -30,40 +42,58 @@
     </header>
 
     <article>
-        <section id="sobreMim" class="begin">
+        <section class="begin">
             <div>
                 <img src="/images/profile.jpg">
             </div>
-            <div class="begin-title">
+            <div class="begin-title"  id="formacao">
                 <h1>Daniel Ferraz dos Santos</h1>
+                <p>Técnico em Informática</p>   
                 <p>Analista de Sistemas</p>
+                <p>Dev. Fullstack</p>
             </div>
         </section>
 
+        <!-- Título "Formação" -->
         <section class="title">
-            <h1>Sobre Mim</h1>
+            <h1>Formação</h1>
         </section>
 
-        <section class="aboutMe">
+        <!-- Seção de "Formação" -->
+        <section class="formacao">
             <div>
-                <div class="about">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur mollitia itaque ducimus numquam aliquid eligendi
-                    odio maiores nulla accusamus quas, vitae temporibus asperiores
-                    voluptatum voluptatibus alias amet cum. Quo, dolore!</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur mollitia itaque ducimus numquam aliquid eligendi
-                    odio maiores nulla accusamus quas, vitae temporibus asperiores
-                    voluptatum voluptatibus alias amet cum. Quo, dolore!</p>
-                <p id="habilidades">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Consectetur mollitia itaque ducimus numquam aliquid eligendi
-                    odio maiores nulla accusamus quas, vitae temporibus asperiores
-                    voluptatum voluptatibus alias amet cum. Quo, dolore!</p>
+                <div>
+                    <p>Me chamo Daniel Ferraz dos Santos, sou formado em
+                    "Informática para Internte", curso técnico oportunizado
+                    pelo "Instituto Federal Catarinense Campus Sombrio".
+                    Minha formação envolve ter conhecimento full-stack,
+                    banco de dados, conceitos básicos sobe hardware e redes de 
+                    computadores. Como trabalho de conclusão de curo, desenvolvi
+                    um sistema de gerenciamento de playlists do spotify para 
+                    utilização de atividades físicas.
+                    </p>
+                    <p>O projeto foi inteiramente
+                    realizado na linguagem JavaScript usando a tecnologia do NodeJs
+                    e outras para funcionalidade do sistema. Possuo formação profissional
+                    pela entidade Datamais do Rio Grande do Sul para a área de informática
+                    em geral, tendo conhecimento sobre Excel, Word, Internet, Digitação,
+                    Conceitos sobre hardware e sofware.
+
+                    </p>
+                    <p id="habilidades">Sou formado pela FASCISC
+                    em empreendedorismo, tendo um trabalho de execução envolvendo uma empresa
+                    totalmente sustentável de venda de instrumentos para aprendizes da área da 
+                    música iniciantes. Estou cursando "Análise e Desenvolvimento e Software" pela Uninter
+                    e possuo diversos projetos com diferentes linguagens e tecnologias, aproveite
+                    o portfólio para saber um pouco mais sobre mim, agradeço sua presença e boa
+                    leitura.
+                    
+                    </p>
                 </div>    
             </div>
         </section>
 
-
+        <!-- Seção de "Habilidade" -->
         <section class="hability">
             <div>
                 <table>
@@ -147,12 +177,16 @@
             </div>  
         </section>
 
+        <!-- Título "Tecnologias" -->
         <section class="title">
             <h1>Tecnologias</h1>
         </section>
 
+        <!-- Seção "Tecnologias" -->
         <section class="tecnology">
             <table>
+
+                <!-- Sobre tecnologias front-end -->
                 <tr>
                     <th>Front-End</th>
                 </tr>
@@ -178,6 +212,8 @@
                         <img class="back"  src="images/7-2.png" class="bot">
                     </td>
                 </tr>
+
+                <!-- Sobre tecnologias back-end -->
                 <tr>
                     <th>Back-End</th>
                 </tr>
@@ -191,73 +227,70 @@
                     <td class="anima">
                         <img src="images/letra-c.png" class="bot">
                     </td>
-                    <td class="anima">
+                    <td class="anima" id="redesSociais">
                         <img src="images/base-de-dados.png" class="bot">
                     </td>
                 </tr>
             </table>
         </section>
 
+        <!-- Título "Redes Sociais" -->
         <section class="title">
             <h1>Redes Sociais</h1>
         </section>
 
-        <section id="redesSociais" class="socialMedia">
+        <!-- Seção das mídias sociais -->
+        <section class="socialMedia">
 
+            <!-- Divisão para as redes sociais -->
             <div class="rede-icons">
                 <div>
-                    <img src="images/instagram (1).png" alt="">
+                    <a href=" https://www.instagram.com/danielferraz2005?igsh=MWw5NjdxZnV6cGlqOA==" target="_blank"><img src="images/instagram (1).png" alt=""></a>
                 </div>
                 <div>
-                    <img src="images/facebook (1).png" alt="">
+                    <a href="https://www.facebook.com/daniel.ferraz.75685?locale=pt_BR" target="_blank"><img src="images/facebook (1).png" alt=""></a>
                 </div>
                 <div>
-                    <img src="images/linkedin.png" alt="">
+                    <a href="https://www.linkedin.com/in/daniel-ferraz-90a7a3283/" target="_blank"><img src="images/linkedin.png" alt=""></a>
                 </div>
                 <div>
-                    <img src="images/gmail.png" alt="">
-                </div>
-                <div>
-                    <img src="images/discord.png" alt="">
-                </div>
-                <div>
-                    <img src="images/github.png" alt="">
+                    <a href="https://github.com/danrhaast" target="_blank"><img src="images/github.png" alt=""></a>
                 </div>
             </div>
         </section>
 
+        <!-- Título "Sobre Mim" -->
         <section class="title">
-            <h1>Projetos</h1>
+            <h1>Sobre Mim</h1>
         </section>
 
-        <section id="projects" class="aboutMe">
+        <!-- Seção "Sobre Mim", a classe "formacao" foi reutilizada
+         para não haver criação de uma nova classe para estilização no CSS -->
+        <section class="formacao"> 
             <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-                Doloribus sint dignissimos in deleniti culpa qui, optio excepturi <br>
-                minima praesentium rerum expedita odio, ipsum voluptatem beatae eos <br>
-                consequatur, similique molestiae illo.</p>
-            </div>
-            
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-                Doloribus sint dignissimos in deleniti culpa qui, optio excepturi <br>
-                minima praesentium rerum expedita odio, ipsum voluptatem beatae eos <br>
-                consequatur, similique molestiae illo.</p>
-            </div>
-
-            <div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <br>
-                Doloribus sint dignissimos in deleniti culpa qui, optio excepturi <br>
-                minima praesentium rerum expedita odio, ipsum voluptatem beatae eos <br>
-                consequatur, similique molestiae illo.</p>
+                <div>
+                    <p>Além de seguir a área de tecnologia, possuo grande interesse na música,
+                    durante muito tempo fiz diversos shows pelo estado de Santa Catarina e 
+                    Rio Grande do Sul como Guitarrista da banda Enarmo. Além dessa banda
+                    toquei junto com a Desync, Paralelo 29 e Luana Palágio durente meu 
+                    período de performista musical, hoje em dia sou professor de violão 
+                    na casa da cultura de Sombrio, SC. Possuo outro projetos musicais
+                    porém ainda estão em construção.
+                    </p>
+                </div>
             </div>
         </section>
     </article>
 
 
+    <!-- Cabeçalho da página -->
     <footer>
+
+        <!-- Seção de formulário -->
         <section class="form">
             <h2>Entre em contato</h2>
+
+            <!-- Formulário para envio de mensagem via Whats -->
                 <form onsubmit="enviarWhats(event)">
                     <div>
                         <div class="input">
@@ -278,7 +311,11 @@
                     <button type="submit">Enviar</button>
                 </form>
 
-                <!--<script>
+                <!-- Script de mensagem para o whats usado
+                 anteriormente antes da criação do arquivo "script.js":
+                
+                
+                <script>
 
                     function enviarWhats (event) {
                         event.preventDefault()

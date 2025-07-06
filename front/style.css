@@ -1,3 +1,5 @@
+
+/* Definição das variáveis de cor da página web */
 :root {
     --preto: #110303;
     --vermelho: #ff194b;
@@ -8,13 +10,15 @@
     --branco: #c9d1d3;
 }
 
-
+/* Importação de fontes do gogle para a página web*/
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
 
+/* Deifnição de rolagem de página para uma visualização mais suave */
 html {
     scroll-behavior: smooth;
 }
 
+/* Definições padrões da página */
 body {
     font-family: "Oswald", sans-serif;
     font-weight: 555;
@@ -24,6 +28,7 @@ body {
     color: var(--branco);
 }
 
+/* Estilização do cabeçalho */
 header {
     height: 80px;
     margin: 10px;
@@ -77,6 +82,7 @@ header {
     }
 }
 
+/* Seção de início da página web*/
 .begin {
     width: 100%;
     display: flex;
@@ -101,17 +107,20 @@ header {
 
         p {
             margin: 2px;
-            font-size: 20px;
+            font-size: 17px;
         }
     }
 }
 
+/* Seção de título usado antes de todas as seções */
 .title {
     width: 100%;
     text-align: center;
 }
 
-.aboutMe {
+
+/* Seção de formação */
+.formacao {
     display: flex;
     justify-content: center;
     margin-bottom: 50px;
@@ -120,6 +129,7 @@ header {
         width: 70vw;
         text-align: center;
         display: flex;
+        justify-content: center;
 
         p {
             padding: 12px;
@@ -128,11 +138,13 @@ header {
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
             box-shadow: 3px 4px 0px var(--marrom);
-            
+            align-items: center;
+            display: flex;
         }
     }
 }
 
+/* Seção de Habilidades*/
 .hability {
     display: flex;
     justify-content: center;
@@ -174,6 +186,7 @@ header {
     }
 }
 
+/* Seção de Tecnologias*/
 .tecnology {
     display: flex;
     justify-content: center;
@@ -197,8 +210,8 @@ header {
 
             .anima {
                 position: relative;
-                width: 3vw;
-                height: 7vh;
+                width: 60px;
+                height: 60px;
                 overflow: hidden;
             }
 
@@ -222,16 +235,18 @@ header {
 
             .anima:hover .front {
                 opacity: 0;
+                cursor: pointer;
             }
 
             .anima:hover .back {
                 opacity: 1;
+                cursor: pointer;
             }
         }
     }
 }
 
-
+/* Seção de Mídias Sociais */
 .socialMedia {
     text-align: center;
     padding: 10px;
@@ -246,6 +261,7 @@ header {
     }
 }
 
+/* Estilização do cabeçalho */
 footer {
     display: flex;
     justify-content: center;
@@ -262,7 +278,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 40vw;
+    width: 35vw;
     height: 40vh;
     background: var(--marrom);
    }
