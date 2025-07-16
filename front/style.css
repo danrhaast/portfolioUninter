@@ -1,4 +1,3 @@
-
 /* Definição das variáveis de cor da página web */
 :root {
     --preto: #110303;
@@ -10,8 +9,10 @@
     --branco: #c9d1d3;
 }
 
-/* Importação de fontes do gogle para a página web*/
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
 
 /* Deifnição de rolagem de página para uma visualização mais suave */
 html {
@@ -21,32 +22,38 @@ html {
 /* Definições padrões da página */
 body {
     font-family: "Oswald", sans-serif;
-    font-weight: 555;
-    margin: 0;
-    padding: 0;
     background-color: var(--preto);
     color: var(--branco);
 }
 
 /* Estilização do cabeçalho */
 header {
-    height: 80px;
+    height: 5rem;
     margin: 10px;
+    display: flex;
+    justify-content: center;
 
-    nav {
-        margin-bottom:10px;
+    div {
+        display: flex;
+        align-items: center;
         background: #110303e5;
-        height: 80px;
+        height: 70px;
         position: fixed;
-        justify-content: space-between;
+        justify-content: center;
         width: 100%;
         top: 0;
-        left:0;
         padding: 10px;
     }
 
-    h1 {
-        margin-left: 10vw;
+    nav {
+        margin-top: 8px;
+        display: flex;
+        align-items: center;
+        /* position: fixed; */
+        justify-content: space-between;
+        width: 60%;
+        /*top: 0; */
+        /* padding: 10px; */
     }
 
     h3 {
@@ -58,7 +65,6 @@ header {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin-right: 10vw;
 
         div {
             display: flex;
@@ -133,7 +139,7 @@ header {
 
         p {
             padding: 12px;
-            margin:  20px;
+            margin: 20px;
             border-top-right-radius: 10px;
             border-bottom-right-radius: 10px;
             border-bottom-left-radius: 10px;
@@ -153,7 +159,7 @@ header {
     div {
         table {
             width: 70vw;
-            
+
             th {
                 background: var(--marrom);
                 margin: 10px;
@@ -172,7 +178,7 @@ header {
             .hab-title {
                 display: flex;
                 justify-content: center;
-                align-items:center;
+                align-items: center;
                 font-size: 30px;
                 margin: 0px;
                 width: 30vw;
@@ -233,53 +239,171 @@ footer {
     margin-bottom: 50px;
     width: 100%;
 
-   h2 {
-    text-align: center;
-   }
+    h2 {
+        text-align: center;
+    }
 
-   .form {
-    border-radius: 10px;
-    padding: 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 35vw;
-    height: 40vh;
-    background: var(--marrom);
-   }
+    .form {
+        border-radius: 10px;
+        padding: 50px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 35vw;
+        height: 40vh;
+        background: var(--marrom);
+    }
 
-   label { 
-    margin-left: 10px;
-   }
+    label {
+        margin-left: 10px;
+    }
 
-   .input {
-    margin-bottom: 10px;
-   }
+    .input {
+        margin-bottom: 10px;
+    }
 
-   input, textarea {
-    padding: 10px;
-    width: 295px;
-    height: 30px;
-    border: none;
-    border-radius: 10px;   
-   }
+    input,
+    textarea {
+        padding: 10px;
+        width: 295px;
+        height: 30px;
+        border: none;
+        border-radius: 10px;
+    }
 
-   #mensagem {
-    height: 70px;
-   }
+    #mensagem {
+        height: 70px;
+    }
 
-   button {
-    padding: 15px;
-    width: 100px;
-    border: none;
-    border-radius: 10px;
-    color: var(--preto);
-    transition: ease 0.3s;
-   }
+    button {
+        padding: 15px;
+        width: 100px;
+        border: none;
+        border-radius: 10px;
+        color: var(--preto);
+        transition: ease 0.3s;
+    }
 
-   button:hover {
-    color: var(--branco);
-    background-color: var(--vinho);
-    cursor: pointer;
-   }
+    button:hover {
+        color: var(--branco);
+        background-color: var(--vinho);
+        cursor: pointer;
+    }
 }
+
+/* Tela para celulares */
+@media (max-width: 600px) {
+    header nav {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+    }
+
+    .begin div h1 {
+        font-size: 22px;
+    }
+
+    .begin div img {
+        width: 80vw;
+    }
+
+    .formacao div {
+        flex-direction: column;
+    }
+
+    .formacao div p {
+        font-size: 15px;
+    }
+
+    .hability div table,
+    .tecnology table .tr-icons {
+        width: 95vw;
+        flex-direction: column;
+    }
+
+    .hability div table .hab-title {
+        font-size: 20px;
+        width: 100%;
+        height: auto;
+    }
+
+    .socialMedia .rede-icons {
+        flex-direction: column;
+    }
+
+    footer .form {
+        flex-direction: column;
+        width: 90vw;
+        height: auto;
+        padding: 20px;
+    }
+
+    footer input,
+    footer textarea {
+        width: 90%;
+    }
+}
+
+
+
+
+/* Tablets */
+@media (max-width: 900px) {
+    header nav {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .begin div h1 {
+        font-size: 25px;
+    }
+
+    .begin div img {
+        width: 50vw;
+    }
+
+    .formacao div,
+    .hability div table,
+    .tecnology table .tr-icons {
+        width: 90vw;
+    }
+
+    .hability div table .hab-title {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    footer .form {
+        width: 80vw;
+        height: auto;
+        padding: 30px;
+        flex-direction: column;
+    }
+
+    footer input,
+    footer textarea {
+        width: 100%;
+    }
+}
+
+
+/* Dispositivos grandes (ajuste suave) */
+@media (min-width: 1200px) {
+    .begin div h1 {
+      font-size: 40px;
+    }
+  
+    .formacao div p {
+      font-size: 18px;
+    }
+  
+    .hability div table .hab-title {
+      font-size: 32px;
+    }
+  
+    footer .form {
+      width: 30vw;
+    }
+  }
+  
